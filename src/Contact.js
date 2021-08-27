@@ -9,7 +9,7 @@ import Fab from '@material-ui/core/Fab';
 import EditIcon from '@material-ui/icons/Edit';
 import { EditAttributesRounded } from '@material-ui/icons';
 
-const ourapiendpoint="https://userinfo-kaustubh.herokuapp.com/users"
+const ourapiendpoint="https://userinfo-kaustubh.herokuapp.com"
 
 export function Contact() {
     
@@ -21,7 +21,7 @@ export function Contact() {
 
 
     function getUsers(){
-        fetch(ourapiendpoint)
+        fetch(ourapiendpoint+"/users")
             .then((data)=>data.json())
             .then((users)=>setusers(users))
     }
